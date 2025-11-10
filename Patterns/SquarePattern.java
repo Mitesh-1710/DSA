@@ -27,7 +27,7 @@
  *     <b>Space Complexity:</b> O(1) — uses constant extra space.
  * </p>
  */
-class SquarePattern {
+public class SquarePattern {
 
     public static void main(String[] args) {
         printSquare(5);
@@ -43,7 +43,7 @@ class SquarePattern {
      *          Must be a positive integer.
      * @throws IllegalArgumentException if {@code n <= 0}
      */
-    public void printSquare(int n) {
+    public static void printSquare(int n) {
         // Validate input
         if (n <= 0) {
             throw new IllegalArgumentException("Size 'n' must be a positive integer.");
