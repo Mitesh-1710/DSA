@@ -86,7 +86,7 @@
  * <p><b>Time Complexity:</b> O(n²) — total prints ≈ n(n + 1)/2.<br>
  * <b>Space Complexity:</b> O(1) — constant extra space.</p>
  */
-public class LeftAlignedInvertedTriangle {
+public class LeftAlignedInvertedTrianglePatterns {
 
     public static void main(String[] args) {
         int n = 5;
