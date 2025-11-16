@@ -21,6 +21,18 @@
  *   <li>If the number is negative, process its absolute value and reapply the sign at the end.</li>
  * </ul>
  *
+ * <p><b>Related Problems Using the Same Logic:</b></p>
+ * <ul>
+ *   <li><b>Check if a number is a palindrome:</b>
+ *       Reverse the number and compare it with the original.
+ *       If both are equal, the number is a palindrome.</li>
+ *
+ *   <li><b>Count even or odd digits:</b>
+ *       Each extracted digit {@code digit = n % 10} can be checked using
+ *       {@code digit % 2 == 0} (even) or {@code digit % 2 != 0} (odd),
+ *       while reducing the number using {@code n = n / 10}.</li>
+ * </ul>
+ *
  * <p><b>Example Walkthrough:</b></p>
  * <pre>
  * n = 245
