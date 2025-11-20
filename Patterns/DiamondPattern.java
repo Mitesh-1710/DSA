@@ -31,56 +31,49 @@
  *
  *   <li><b>Lower Half Logic (n-2 → 0):</b>
  *     <ul>
- *       <li>Spaces before stars → increases as row goes down</li>
- *       <li>Stars printed → again <code>(2*i) + 1</code></li>
+ *       <li>Spaces before stars → increases as we go down</li>
+ *       <li>Stars printed → same width formula <code>(2*i) + 1</code></li>
  *     </ul>
  *   </li>
  *
- *   <li>The diamond is therefore formed by:
+ *   <li><b>Identifying Symmetry Helps Build Other Patterns:</b>
  *     <ul>
- *       <li>Upper centered pyramid (increasing width)</li>
- *       <li>Lower centered inverted pyramid (decreasing width)</li>
+ *       <li>The diamond = an upright centered pyramid + an inverted centered pyramid.</li>
+ *       <li>Using the same concept, other shapes can be constructed.</li>
+ *       <li>Example: A <b>Right Arrow</b> pattern =
+ *         <ul>
+ *           <li>Left-aligned right-angled triangle (increasing)</li>
+ *           <li>Left-aligned inverted right-angled triangle (decreasing)</li>
+ *         </ul>
+ *       </li>
+ *       <li>The technique is to recognize symmetric halves and combine them.</li>
  *     </ul>
  *   </li>
  * </ul>
- *
- * <p><b>Example for n = 5:</b></p>
- * <pre>
- *     *
- *    ***
- *   *****
- *  *******
- * *********
- *  *******
- *   *****
- *    ***
- *     *
- * </pre>
- *
- * <p><b>Time Complexity:</b> O(n²)</p>
- * <p><b>Space Complexity:</b> O(1)</p>
  */
 public class DiamondPattern {
 
     public static void main(String[] args) {
         printDiamondPattern(5);
+        printArrowPattern(5);
     }
 
     /**
      * Prints a centered diamond using '*' characters.
-     * The width formula for every row is (2*i + 1).
+     * Both halves follow the star-width formula: (2*i + 1).
      */
     public static void printDiamondPattern(int n) {
 
-        // UPPER PYRAMID (0 → n-1)
+        // UPPER PYRAMID: rows 0 → n-1
         for (int i = 0; i < n; i++) {
 
-            // 1. Print leading spaces → (n - i - 1)
+            // 1. Print leading spaces → decreases as i increases
+            //    Formula: (n - i - 1)
             for (int k = 0; k < n - i - 1; k++) {
                 System.out.print(" ");
             }
 
-            // 2. Print stars → width = (2*i) + 1
+            // 2. Print stars → odd count based on (2*i + 1)
             for (int k = 0; k < (2 * i) + 1; k++) {
                 System.out.print("*");
             }
@@ -88,17 +81,49 @@ public class DiamondPattern {
             System.out.println();
         }
 
-        // LOWER INVERTED PYRAMID (n-2 → 0)
+        // LOWER INVERTED PYRAMID: rows n-2 → 0
         for (int i = n - 2; i >= 0; i--) {
 
-            // 1. Leading spaces → increases as we go down
-            //    Equivalent to: (n - 1) - i
+            // 1. Leading spaces → increases as i decreases
+            //    Equivalent to: (n - 1 - i)
             for (int k = i; k < n - 1; k++) {
                 System.out.print(" ");
             }
 
-            // 2. Stars → again (2*i) + 1
+            // 2. Print stars → same formula (2*i + 1)
             for (int k = 0; k < (2 * i) + 1; k++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+    /**
+     * Prints a right-arrow-like shape using '*'.
+     *
+     * This is built using the same symmetry logic identified in the diamond:
+     *  - First half: normal left-aligned triangle   (0 → n-1)
+     *  - Second half: inverted left-aligned triangle (n-2 → 0)
+     */
+    public static void printArrowPattern(int n) {
+
+        // UPPER HALF: increasing stars
+        for (int i = 0; i < n; i++) {
+
+            // Print (i+1) stars
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        // LOWER HALF: decreasing stars
+        for (int i = n - 2; i >= 0; i--) {
+
+            // Print (i+1) stars in decreasing order
+            for (int j = 0; j <= i; j++) {
                 System.out.print("*");
             }
 
