@@ -98,14 +98,15 @@ public class InvertedPyramidPatterns {
         printInvertedAlphabetPyramid(n);
     }
 
-    /** Prints a centered inverted pyramid using '*' characters (width = 2*i + 1). */
+    /**
+     * Prints a centered inverted pyramid using '*' characters (width = 2*i + 1).
+     */
     public static void printInvertedPyramid(int n) {
-        validateInput(n);
 
-        for (int i = n-1; i >= 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
 
             // 1. Print leading spaces → (n - i - 1)
-            for (int k = i; k < n-1; k++) {
+            for (int k = i; k < n - 1; k++) {
                 System.out.print(" ");
             }
 
@@ -118,11 +119,12 @@ public class InvertedPyramidPatterns {
         }
     }
 
-    /** Prints a centered inverted alphabet pyramid using (2*i + 1) characters per row. */
+    /**
+     * Prints a centered inverted alphabet pyramid using (2*i + 1) characters per row.
+     */
     public static void printInvertedAlphabetPyramid(int n) {
-        validateInput(n);
 
-        for (int i = n-1; i >= 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
 
             // 1. Print leading spaces
             for (int k = i; k < n - 1; k++) {
@@ -138,13 +140,6 @@ public class InvertedPyramidPatterns {
             }
 
             System.out.println();
-        }
-    }
-
-    /** Ensures {@code n} is positive before proceeding. */
-    private static void validateInput(int n) {
-        if (n <= 0) {
-            throw new IllegalArgumentException("Size 'n' must be a positive integer.");
         }
     }
 }

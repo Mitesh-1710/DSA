@@ -116,9 +116,10 @@ public class LeftAlignedRightAngledTrianglePatterns {
         printReverseAlphabetStartTriangle(n);
     }
 
-    /** Prints a left-aligned triangle of asterisks ('*'). */
+    /**
+     * Prints a left-aligned triangle of asterisks ('*').
+     */
     public static void printAsteriskTriangle(int n) {
-        validateInput(n);
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
@@ -127,9 +128,10 @@ public class LeftAlignedRightAngledTrianglePatterns {
         }
     }
 
-    /** Prints numbers from 1 to i in each row. */
+    /**
+     * Prints numbers from 1 to i in each row.
+     */
     public static void printIncrementalNumberTriangle(int n) {
-        validateInput(n);
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j);
@@ -138,9 +140,10 @@ public class LeftAlignedRightAngledTrianglePatterns {
         }
     }
 
-    /** Prints the current row number repeatedly in each row. */
+    /**
+     * Prints the current row number repeatedly in each row.
+     */
     public static void printRowNumberTriangle(int n) {
-        validateInput(n);
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(i);
@@ -157,7 +160,6 @@ public class LeftAlignedRightAngledTrianglePatterns {
      * </pre>
      */
     public static void printBinaryTriangle(int n) {
-        validateInput(n);
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(((i + j) % 2 == 0) ? 1 : 0);
@@ -166,9 +168,10 @@ public class LeftAlignedRightAngledTrianglePatterns {
         }
     }
 
-    /** Prints a triangle with continuous numbers increasing across rows. */
+    /**
+     * Prints a triangle with continuous numbers increasing across rows.
+     */
     public static void printContinuousNumberTriangle(int n) {
-        validateInput(n);
         int num = 1;
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
@@ -178,9 +181,10 @@ public class LeftAlignedRightAngledTrianglePatterns {
         }
     }
 
-    /** Prints a triangle where each row contains increasing letters from 'A'. */
+    /**
+     * Prints a triangle where each row contains increasing letters from 'A'.
+     */
     public static void printIncrementalAlphabetTriangle(int n) {
-        validateInput(n);
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print((char) ('A' + (j)));
@@ -189,9 +193,10 @@ public class LeftAlignedRightAngledTrianglePatterns {
         }
     }
 
-    /** Prints a triangle where each row contains the same letter repeated. */
+    /**
+     * Prints a triangle where each row contains the same letter repeated.
+     */
     public static void printRepeatedAlphabetTriangle(int n) {
-        validateInput(n);
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print((char) ('A' + i));
@@ -204,19 +209,11 @@ public class LeftAlignedRightAngledTrianglePatterns {
      * Prints a triangle where the starting letter of each row decreases from 'A' + j down to 'A'.
      */
     public static void printReverseAlphabetStartTriangle(int n) {
-        validateInput(n);
-        for (int i = n-1; i >= 0; i--) {
-            for (int j = i; j <= n-1; j++ ) {
-                System.out.print( (char) ('A' + j));
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = i; j <= n - 1; j++) {
+                System.out.print((char) ('A' + j));
             }
             System.out.println();
-        }
-    }
-
-    /** Validates that {@code n} is a positive integer. */
-    private static void validateInput(int n) {
-        if (n <= 0) {
-            throw new IllegalArgumentException("Size 'n' must be a positive integer.");
         }
     }
 }

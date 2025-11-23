@@ -35,20 +35,8 @@ public class SquarePattern {
 
     /**
      * Prints a square pattern of asterisks of size {@code n x n}.
-     *
-     * <p>Each line contains {@code n} asterisks without spaces between them,
-     * followed by a newline character. The result is a solid square.
-     *
-     * @param n The number of rows and columns in the square pattern.
-     *          Must be a positive integer.
-     * @throws IllegalArgumentException if {@code n <= 0}
      */
     public static void printSquare(int n) {
-        // Validate input
-        if (n <= 0) {
-            throw new IllegalArgumentException("Size 'n' must be a positive integer.");
-        }
-
         // Outer loop controls the number of rows
         for (int i = 0; i < n; i++) {
             // Inner loop prints '*' n times per row

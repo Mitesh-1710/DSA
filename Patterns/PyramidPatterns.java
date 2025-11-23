@@ -9,7 +9,7 @@
  *   <li><b>3.</b> Alphabet Symmetry Pyramid — Prints left-to-middle increasing alphabets and
  *       then mirrors them on the right, forming a centered alphabetical palindrome.</li>
  * </ul>
- *
+ * <p>
  * -----------------------------------------------------------------------
  * <b>Thought Process Behind the Pattern Shape:</b>
  *
@@ -59,7 +59,7 @@
  *     </ul>
  *   </li>
  * </ul>
- *
+ * <p>
  * -----------------------------------------------------------------------
  * <b>Example Output for {@code n = 5}:</b>
  *
@@ -89,7 +89,7 @@
  *  ABCDCBA
  * ABCDEDCBA
  * </pre>
- *
+ * <p>
  * -----------------------------------------------------------------------
  * <b>Time Complexity:</b> O(n²)
  * <b>Space Complexity:</b> O(1)
@@ -110,9 +110,10 @@ public class PyramidPatterns {
         printAlphabetSymmetryPyramid(n);
     }
 
-    /** Prints a centered pyramid using '*' characters (width = 2*i + 1). */
+    /**
+     * Prints a centered pyramid using '*' characters (width = 2*i + 1).
+     */
     public static void printAsteriskPyramid(int n) {
-        validateInput(n);
 
         for (int i = 0; i < n; i++) {
 
@@ -130,9 +131,10 @@ public class PyramidPatterns {
         }
     }
 
-    /** Prints a centered alphabet pyramid (AAA... growing width = 2*i + 1). */
+    /**
+     * Prints a centered alphabet pyramid (AAA... growing width = 2*i + 1).
+     */
     public static void printAlphabetPyramid(int n) {
-        validateInput(n);
 
         for (int i = 0; i < n; i++) {
 
@@ -155,14 +157,13 @@ public class PyramidPatterns {
 
     /**
      * Prints a centered alphabet palindrome pyramid such as:
-     *     A
-     *    ABA
-     *   ABCBA
-     *  ABCDCBA
+     * A
+     * ABA
+     * ABCBA
+     * ABCDCBA
      * ABCDEDCBA
      */
     public static void printAlphabetSymmetryPyramid(int n) {
-        validateInput(n);
 
         for (int i = 0; i < n; i++) {
 
@@ -183,13 +184,6 @@ public class PyramidPatterns {
             }
 
             System.out.println();
-        }
-    }
-
-    /** Input validation for positive values. */
-    private static void validateInput(int n) {
-        if (n <= 0) {
-            throw new IllegalArgumentException("Size 'n' must be a positive integer.");
         }
     }
 }

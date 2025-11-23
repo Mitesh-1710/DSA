@@ -6,7 +6,7 @@
  *   <li><b>1. Centered Diamond Pattern</b> — formed using two mirrored pyramids.</li>
  *   <li><b>2. Right-Arrow Pattern</b> — formed using two mirrored left-aligned triangles.</li>
  * </ul>
- *
+ * <p>
  * -----------------------------------------------------------------------
  * <b>Thought Process Behind the Pattern Shapes:</b>
  *
@@ -15,7 +15,6 @@
  *
  * <ul>
  *
- *   <!-- Diamond Section -->
  *   <li><b>I. Diamond Pattern — Core Mathematical Structure</b>
  *     <ul>
  *       <li>The diamond is a combination of:
@@ -39,10 +38,10 @@
  *     <ul>
  *       <li>For center alignment, each row begins with spaces.</li>
  *       <li><b>Upper Half (0 → n-1):</b>
- *         <ul><li>Spaces = <code>n - i - 1</code></li></ul>
+ *         <ul><li>Spaces = {@code n - i - 1}</li></ul>
  *       </li>
  *       <li><b>Lower Half (n-2 → 0):</b>
- *         <ul><li>Spaces = <code>n - 1 - i</code></li></ul>
+ *         <ul><li>Spaces = {@code n - 1 - i}</li></ul>
  *       </li>
  *     </ul>
  *
@@ -54,7 +53,6 @@
  *     </ul>
  *   </li>
  *
- *   <!-- Arrow Section -->
  *   <li><b>II. Right-Arrow Pattern — Symmetry in Left-Aligned Shapes</b>
  *     <ul>
  *       <li>Constructed from:
@@ -92,7 +90,7 @@
  *     </ul>
  *   </li>
  * </ul>
- *
+ * <p>
  * -----------------------------------------------------------------------
  * <b>Example Output for {@code n = 5}:</b>
  *
@@ -121,7 +119,7 @@
  * **
  * *
  * </pre>
- *
+ * <p>
  * -----------------------------------------------------------------------
  * <b>Time Complexity:</b> O(n²)<br>
  * <b>Space Complexity:</b> O(1)

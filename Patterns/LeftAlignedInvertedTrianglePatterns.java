@@ -116,9 +116,10 @@ public class LeftAlignedInvertedTrianglePatterns {
         printReverseAlphabetStartTriangle(n);
     }
 
-    /** Prints an inverted triangle of asterisks ('*'). */
+    /**
+     * Prints an inverted triangle of asterisks ('*').
+     */
     public static void printAsteriskInvertedTriangle(int n) {
-        validateInput(n);
         for (int i = n; i >= 1; i--) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
@@ -127,9 +128,10 @@ public class LeftAlignedInvertedTrianglePatterns {
         }
     }
 
-    /** Prints numbers from 1 to i (decreasing number of columns each row). */
+    /**
+     * Prints numbers from 1 to i (decreasing number of columns each row).
+     */
     public static void printDecrementalNumberTriangle(int n) {
-        validateInput(n);
         for (int i = n; i >= 1; i--) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j);
@@ -138,9 +140,10 @@ public class LeftAlignedInvertedTrianglePatterns {
         }
     }
 
-    /** Prints the same number (the row number) across each row in decreasing order. */
+    /**
+     * Prints the same number (the row number) across each row in decreasing order.
+     */
     public static void printRowNumberTriangle(int n) {
-        validateInput(n);
         for (int i = n; i >= 1; i--) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(i);
@@ -157,7 +160,6 @@ public class LeftAlignedInvertedTrianglePatterns {
      * </pre>
      */
     public static void printBinaryTriangle(int n) {
-        validateInput(n);
         for (int i = n; i >= 1; i--) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(((i + j) % 2 == 0) ? 1 : 0);
@@ -166,9 +168,10 @@ public class LeftAlignedInvertedTrianglePatterns {
         }
     }
 
-    /** Prints a triangle with continuous numbers decreasing across all rows. */
+    /**
+     * Prints a triangle with continuous numbers decreasing across all rows.
+     */
     public static void printContinuousNumberTriangle(int n) {
-        validateInput(n);
         int num = (n * (n + 1)) / 2;
         for (int i = n; i >= 1; i--) {
             for (int j = 1; j <= i; j++) {
@@ -178,9 +181,10 @@ public class LeftAlignedInvertedTrianglePatterns {
         }
     }
 
-    /** Prints decreasing-length alphabet sequences from 'A'. */
+    /**
+     * Prints decreasing-length alphabet sequences from 'A'.
+     */
     public static void printDecrementalAlphabetTriangle(int n) {
-        validateInput(n);
         for (int i = n; i >= 1; i--) {
             for (int j = 0; j < i; j++) {
                 System.out.print((char) ('A' + j));
@@ -189,9 +193,10 @@ public class LeftAlignedInvertedTrianglePatterns {
         }
     }
 
-    /** Prints the same letter repeated in decreasing-length rows (starting from 'A' + n - 1). */
+    /**
+     * Prints the same letter repeated in decreasing-length rows (starting from 'A' + n - 1).
+     */
     public static void printRepeatedAlphabetTriangle(int n) {
-        validateInput(n);
         for (int i = n - 1; i >= 0; i--) {
             for (int j = 0; j <= i; j++) {
                 System.out.print((char) ('A' + i));
@@ -200,21 +205,15 @@ public class LeftAlignedInvertedTrianglePatterns {
         }
     }
 
-    /** Prints decreasing-length sequences starting from an increasing letter each row. */
+    /**
+     * Prints decreasing-length sequences starting from an increasing letter each row.
+     */
     public static void printReverseAlphabetStartTriangle(int n) {
-        validateInput(n);
         for (int i = 0; i < n; i++) {
             for (int j = i; j < n; j++) {
                 System.out.print((char) ('A' + j));
             }
             System.out.println();
-        }
-    }
-
-    /** Ensures {@code n} is positive before proceeding. */
-    private static void validateInput(int n) {
-        if (n <= 0) {
-            throw new IllegalArgumentException("Size 'n' must be a positive integer.");
         }
     }
 }
