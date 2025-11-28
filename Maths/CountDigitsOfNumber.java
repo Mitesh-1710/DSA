@@ -59,6 +59,16 @@ public class CountDigitsOfNumber {
 
         int count = 0;
 
+        // NOTE:
+        // Using this same loop logic (extracting digits one by one),
+        // we can solve several related problems:
+        //   - Find the largest digit in the number by comparing each digit and taking a variable for storing current maximum
+        //   - Find the smallest digit in the number by comparing each digit and taking a variable for storing current minimum
+        //   - Count even/odd digits
+        //   - Check if the number is a palindrome
+        //
+        // All of these rely on repeatedly removing digits using n = n / 10.
+
         // Repeatedly divide by 10 to remove digits
         while (n > 0) {
             n = n / 10;  // Remove last digit
