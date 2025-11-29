@@ -67,7 +67,7 @@
  * <b>Space Complexity:</b> O(1) — only one variable used for accumulation
  * -----------------------------------------------------------------------
  */
-public class Factorial {
+public class Factorial{
 
     public static void main(String[] args) {
         System.out.println("Factorial of 0: " + factorial(0));
