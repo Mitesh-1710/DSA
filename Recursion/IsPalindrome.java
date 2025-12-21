@@ -58,7 +58,7 @@
  * <b>Space Complexity:</b> O(n) — recursion call stack.
  * -----------------------------------------------------------------------
  */
-public class PalindromeCheck {
+public class IsPalindrome {
 
     public static void main(String[] args) {
         System.out.println("Is 'madam' palindrome?  " + palindromeCheck("madam"));
