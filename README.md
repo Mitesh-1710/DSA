@@ -6,7 +6,7 @@
 
 This repository contains my solutions to various **LeetCode** problems and **logic based exercises** (like patterns, maths, recursion, etc.) that I solve as part of my coding practice journey.
 
-I aim to write **clean**, **readable**, and **efficient** Java code while improving my **problem-solving** and **logical thinking** skills.
+I aim to write **clean**, **readable**, and **efficient** Java code while improving my **problem solving** and **logical thinking** skills.
 
 ---
 
@@ -43,6 +43,8 @@ I aim to write **clean**, **readable**, and **efficient** Java code while improv
 ┣ 📁 LeetCode
 
 ┣ 📁 Arrays
+
+┣ 📁 Hashing
 
 ┣ 📁 Recursion
 
