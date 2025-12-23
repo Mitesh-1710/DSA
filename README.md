@@ -1,19 +1,19 @@
-> My personal journey of mastering **Data Structures and Algorithms (DSA)** and **logic-building** using Java.
+> My personal journey of mastering **Data Structures and Algorithms (DSA)** and **logic building** using Java.
 
 ---
 
 ## 📘 About This Repository
 
-This repository contains my solutions to various **LeetCode** problems and **logic-based exercises** (like patterns, maths, recursion, etc.) that I solve as part of my coding practice journey.
+This repository contains my solutions to various **LeetCode** problems and **logic based exercises** (like patterns, maths, recursion, etc.) that I solve as part of my coding practice journey.
 
-I aim to write **clean**, **readable**, and **efficient** Java code while improving my **problem-solving** and **logical thinking** skills.
+I aim to write **clean**, **readable**, and **efficient** Java code while improving my **problem solving** and **logical thinking** skills.
 
 ---
 
 ## 🧠 What You’ll Find Here
 
 - 💡 **LeetCode Solutions** — covering a range of DSA topics  
-- 🧩 **Logic-Building Problems** — patterns, maths, recursion, etc., and more  
+- 🧩 **Logic Building Problems** — patterns, maths, recursion, etc., and more  
 - 📝 Well-commented and organized Java code  
 - 🔁 Continuous updates as I solve new problems
 
@@ -25,7 +25,7 @@ I aim to write **clean**, **readable**, and **efficient** Java code while improv
 |------|--------------|
 | 💻 **Language** | Java |
 | 🧰 **IDE** | IntelliJ IDEA |
-| ⚙️ **Focus Areas** | DSA, problem-solving, and logic-building |
+| ⚙️ **Focus Areas** | DSA, problem solving, and logic building |
 
 ---
 
@@ -42,7 +42,11 @@ I aim to write **clean**, **readable**, and **efficient** Java code while improv
 
 ┣ 📁 LeetCode
 
-┣ 📁 LogicBuilding
+┣ 📁 Arrays
+
+┣ 📁 Hashing
+
+┣ 📁 Recursion
 
 ┗ 📜 README.md
 
