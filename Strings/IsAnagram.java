@@ -58,7 +58,7 @@
  * <b>Space Complexity:</b> O(1) — fixed array of size 26.
  * -----------------------------------------------------------------------
  */
-public class AnagramStrings {
+public class IsAnagram {
 
     public static void main(String[] args) {
 

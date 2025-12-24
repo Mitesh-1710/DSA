@@ -54,7 +54,7 @@
  * <b>Space Complexity:</b> O(n) — concatenated string storage.
  * -----------------------------------------------------------------------
  */
-public class RotateStringCheck {
+public class IsRotation {
 
     public static void main(String[] args) {
         System.out.println("Rotation check (abcde → cdeab): "

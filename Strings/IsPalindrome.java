@@ -72,13 +72,13 @@
  * <b>Space Complexity:</b> O(1) — no additional memory needed.
  * -----------------------------------------------------------------------
  */
-public class PalindromeCheck {
+public class IsPalindrome {
 
     public static void main(String[] args) {
-        System.out.println("1. Is 'madam' palindrome? → " + palindromeCheck("madam"));
-        System.out.println("2. Is 'hello' palindrome? → " + palindromeCheck("hello"));
-        System.out.println("3. Is 'racecar' palindrome? → " + palindromeCheck("racecar"));
-        System.out.println("4. Is 'abca' palindrome? → " + palindromeCheck("abca"));
+        System.out.println("1. Is 'madam' palindrome? → " + isPalindrome("madam"));
+        System.out.println("2. Is 'hello' palindrome? → " + isPalindrome("hello"));
+        System.out.println("3. Is 'racecar' palindrome? → " + isPalindrome("racecar"));
+        System.out.println("4. Is 'abca' palindrome? → " + isPalindrome("abca"));
     }
 
     /**
@@ -94,7 +94,7 @@ public class PalindromeCheck {
      * @param s the input string
      * @return {@code true} if palindrome, else {@code false}
      */
-    public static boolean palindromeCheck(String s) {
+    public static boolean isPalindrome(String s) {
 
         int left = 0;
         int right = s.length() - 1;

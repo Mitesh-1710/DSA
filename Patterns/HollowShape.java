@@ -133,7 +133,7 @@
  * <b>Space Complexity:</b> O(1)
  * -----------------------------------------------------------------------
  */
-public class HollowShapePatterns {
+public class HollowShape {
 
     public static void main(String[] args) {
         int n = 5;

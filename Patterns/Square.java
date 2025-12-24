@@ -27,7 +27,7 @@
  *     <b>Space Complexity:</b> O(1) — uses constant extra space.
  * </p>
  */
-public class SquarePattern {
+public class Square {
 
     public static void main(String[] args) {
         printSquare(5);

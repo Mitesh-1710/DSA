@@ -125,7 +125,7 @@
  * <b>Space Complexity:</b> O(1)
  * -----------------------------------------------------------------------
  */
-public class DiamondPattern {
+public class Diamond {
 
     public static void main(String[] args) {
         int n = 5;

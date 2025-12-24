@@ -63,7 +63,7 @@
  * <b>Space Complexity:</b> O(1) — no extra space used.
  * -----------------------------------------------------------------------
  */
-public class ConcentricNumberSquarePattern {
+public class ConcentricNumberSquare {
 
     public static void main(String[] args) {
         int n = 5;

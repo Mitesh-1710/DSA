@@ -95,7 +95,7 @@
  * <b>Space Complexity:</b> O(1)
  * -----------------------------------------------------------------------
  */
-public class PyramidPatterns {
+public class Pyramid {
 
     public static void main(String[] args) {
         int n = 5;

@@ -60,7 +60,7 @@
  * <b>Space Complexity:</b> O(1) — in-place swaps only.
  * -----------------------------------------------------------------------
  */
-public class ReverseArray {
+public class Reverse {
 
     public static void main(String[] args) {
 

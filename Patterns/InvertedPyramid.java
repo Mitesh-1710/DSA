@@ -86,7 +86,7 @@
  * <p><b>Time Complexity:</b> O(n²) — nested loops forming the centered structure.<br>
  * <b>Space Complexity:</b> O(1) — no extra space used.</p>
  */
-public class InvertedPyramidPatterns {
+public class InvertedPyramid {
 
     public static void main(String[] args) {
         int n = 5;

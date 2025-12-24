@@ -59,7 +59,7 @@
  * <b>Space Complexity:</b> O(1) — Only counters/accumulator used.
  * -----------------------------------------------------------------------
  */
-public class SumOfArrayElements {
+public class SumOfElements {
 
     public static void main(String[] args) {
         int[] a1 = {1, 2, 3, 4, 5};

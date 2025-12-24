@@ -64,7 +64,7 @@
  * Space Complexity: O(1)
  * ---------------------------------------------------------------------
  */
-public class NumberPalindromePattern {
+public class NumberPalindrome {
 
     public static void main(String[] args) {
         printNumberPalindromePattern(5);

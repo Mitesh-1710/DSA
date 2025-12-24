@@ -47,7 +47,7 @@
  * <b>Space Complexity:</b> O(1) — no extra space used.
  * -----------------------------------------------------------------------
  */
-public class CheckIfArraySorted {
+public class IsSorted {
 
     public static void main(String[] args) {
         int[] a1 = {1, 2, 3, 4, 5};
