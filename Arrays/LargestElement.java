@@ -62,7 +62,6 @@ public class LargestElement {
      *
      * @param nums input array
      * @return maximum element in the array
-     * @throws IllegalArgumentException if the array is null or empty
      */
     public static int largestElement(int[] nums) {
         // Assume first element is the largest

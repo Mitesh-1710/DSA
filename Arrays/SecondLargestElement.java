@@ -78,7 +78,6 @@ public class SecondLargestElement {
      *
      * @param nums input integer array
      * @return second largest element, or -1 if it does not exist
-     * @throws IllegalArgumentException if the array is null or empty
      */
     public static int secondLargestElement(int[] nums) {
 
