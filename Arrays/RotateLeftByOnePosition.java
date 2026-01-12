@@ -47,7 +47,7 @@
  * <b>Space Complexity:</b> O(1) — in-place rotation.
  * -----------------------------------------------------------------------
  */
-public class RotateLeftByOne {
+public class RotateLeftByOnePosition {
 
     public static void main(String[] args) {
 
