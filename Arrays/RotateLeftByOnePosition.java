@@ -65,7 +65,6 @@ public class RotateLeftByOnePosition {
      * Rotates the given array to the left by one position.
      *
      * @param nums input integer array
-     * @throws IllegalArgumentException if the array is null
      */
     public static void rotateArrayByOne(int[] nums) {
         if (nums.length <= 1) {
