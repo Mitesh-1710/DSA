@@ -40,13 +40,23 @@ I aim to write **clean**, **readable**, and **efficient** Java code while improv
 ## 📂 Repository Structure
 📦 DSA
 
-┣ 📁 LeetCode
-
 ┣ 📁 Arrays
 
 ┣ 📁 Hashing
 
+┣ 📁 LeetCode
+
+┣ 📁 Maths
+
+┣ 📁 Patterns
+
 ┣ 📁 Recursion
+
+┣ 📁 Searching
+
+┣ 📁 Sorting
+
+┣ 📁 String
 
 ┗ 📜 README.md
 
