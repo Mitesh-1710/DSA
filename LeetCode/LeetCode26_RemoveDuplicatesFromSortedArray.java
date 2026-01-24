@@ -2,7 +2,7 @@
  * Problem:
  * Remove duplicates from a sorted integer array in-place and return the number of unique elements.
  *
- * <p>This corresponds to <b>LeetCode Problem 26</b>:
+ * <p>This is the solution to LeetCode Problem 26:
  * <br>https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  *
  * <p>The array is sorted in non-decreasing order.
