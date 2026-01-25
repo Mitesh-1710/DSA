@@ -6,8 +6,8 @@
  * <p>Each element in the result must be <b>unique</b> and
  * the order of elements in the result does not matter.</p>
  *
- * <p>This is the solution to LeetCode Problem 349:
- * <br>https://leetcode.com/problems/intersection-of-two-arrays/
+ * <p>This is the solution to <b>LeetCode Problem 349: Intersection Of Two Arrays</b></p>
+ * <p>https://leetcode.com/problems/intersection-of-two-arrays/</p>
  *
  * -----------------------------------------------------------------------
  * <b>Thought Process Behind the Solution:</b>
