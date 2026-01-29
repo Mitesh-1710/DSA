@@ -12,7 +12,7 @@
  * appear in the {@code allowed} string.</p>
  *
  * <p>This is the solution to <b>LeetCode Problem 1684: Count the Number of Consistent Strings</b></p>
- * <p>https://leetcode.com/problems/count-the-number-of-consistent-strings/</p>
+ * <p>🔗 https://leetcode.com/problems/count-the-number-of-consistent-strings/</p>
  *
  * -----------------------------------------------------------------------
  * <b>Thought Process Behind the Solution:</b>

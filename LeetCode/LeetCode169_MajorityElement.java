@@ -4,7 +4,7 @@
  * ⌊n / 2⌋ times. You may assume that the majority element always exists.
  *
  * <p>This is the solution to <b>LeetCode Problem 169: Majority Element</b></p>
- * <p>https://leetcode.com/problems/majority-element/</p>
+ * <p>🔗 https://leetcode.com/problems/majority-element/</p>
  *
  * -----------------------------------------------------------------------
  * <b>Thought Process Behind the Solution:</b>

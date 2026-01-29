@@ -3,7 +3,7 @@
  * Remove duplicates from a sorted integer array in-place and return the number of unique elements.
  *
  * <p>This is the solution to <b>LeetCode Problem 26: Remove Duplicates From Sorted Array</b></p>
- * <p>https://leetcode.com/problems/remove-duplicates-from-sorted-array/</p>
+ * <p>🔗 https://leetcode.com/problems/remove-duplicates-from-sorted-array/</p>
  *
  * <p>The array is sorted in non-decreasing order.
  * After removing duplicates, the first <b>k</b> elements of the array

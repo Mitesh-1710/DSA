@@ -7,7 +7,7 @@ import java.util.Map;
  * return the indices of the two numbers such that they add up to {@code target}.
  *
  * <p>This is the solution to <b>LeetCode Problem 1: Two Sum</b></p>
- * <p>https://leetcode.com/problems/two-sum/</p>
+ * <p>🔗 https://leetcode.com/problems/two-sum/</p>
  *
  * <p>Each input has exactly one solution, and the same element
  * cannot be used twice.</p>
