@@ -48,7 +48,7 @@
  *
  * left = 0 ('l'), right = 4 ('l') → match
  * left = 1 ('e'), right = 3 ('e') → match
- * left = 2, right = 2              → middle reached
+ * left = 2, right = 2             → middle reached
  *
  * Result: true (it's a palindrome)
  * </pre>

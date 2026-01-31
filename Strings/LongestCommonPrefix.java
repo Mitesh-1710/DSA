@@ -96,8 +96,6 @@ public class LongestCommonPrefix {
      */
     public static String longestCommonPrefix(String[] s) {
 
-        // Defensive checks
-        if (s == null || s.length == 0) return "";
         if (s.length == 1) return s[0];
 
         // Sort strings lexicographically
