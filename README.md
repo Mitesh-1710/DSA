@@ -41,23 +41,14 @@ I aim to write **clean**, **readable**, and **efficient** Java code while improv
 📦 DSA
 
 ┣ 📁 Arrays
-
+┣ 📁 BitManipulation
 ┣ 📁 Hashing
-
-┣ 📁 LeetCode
-
 ┣ 📁 Maths
-
 ┣ 📁 Patterns
-
 ┣ 📁 Recursion
-
 ┣ 📁 Searching
-
 ┣ 📁 Sorting
-
-┣ 📁 String
-
+┣ 📁 Strings
 ┗ 📜 README.md
 
 *(Structure may evolve as I add more problems.)*
