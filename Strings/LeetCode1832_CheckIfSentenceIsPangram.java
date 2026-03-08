@@ -13,77 +13,80 @@
  * -----------------------------------------------------------------------
  * <b>Thought Process Behind the Solution:</b>
  *
- * The goal is to determine whether all 26 letters of the English alphabet
- * appear at least once in the given sentence.
+ * The goal is to determine whether all 26 alphabet letters appear
+ * in the sentence.
  *
  * Naive Approach:
  * <ul>
- *   <li>For each letter from 'a' to 'z', scan the entire string
- *       to check if it exists.</li>
+ *   <li>For every letter from 'a' to 'z', check if it exists
+ *       in the string.</li>
  * </ul>
- *
- * This results in:
- *
- * <pre>
- * O(26 * n) ≈ O(n)
- * </pre>
  *
  * Although acceptable, it repeatedly scans the string.
  *
- * Optimized Approach:
+ * Optimized Boolean Array Approach:
  * <ul>
- *   <li>Track letters seen using a boolean array of size 26.</li>
+ *   <li>Use a boolean array of size 26.</li>
  *   <li>Mark characters as they appear.</li>
- *   <li>Stop early once all 26 letters are discovered.</li>
  * </ul>
  *
- * This ensures only a single pass through the sentence.
+ * Further Optimized Bitmask Approach:
+ * <ul>
+ *   <li>Use a single integer where each bit represents a letter.</li>
+ *   <li>Set the corresponding bit when a letter appears.</li>
+ * </ul>
  *
  * -----------------------------------------------------------------------
- * <b>Alphabet Index Mapping Concept (Detailed Explanation):</b>
+ * <b>Bitmask Concept (Detailed Explanation):</b>
  *
- * Each lowercase letter can be mapped to an index:
+ * Since there are 26 lowercase letters, we can represent them
+ * using 26 bits of an integer.
+ *
+ * Mapping:
  *
  * <pre>
- * 'a' → 0
- * 'b' → 1
+ * bit 0  → 'a'
+ * bit 1  → 'b'
  * ...
- * 'z' → 25
+ * bit 25 → 'z'
  * </pre>
  *
- * Using:
+ * To mark a letter as seen:
  *
  * <pre>
- * index = c - 'a'
+ * mask |= 1 << (c - 'a')
  * </pre>
  *
- * We store whether a character has appeared using:
- *
- * <pre>
- * boolean[] seen = new boolean[26];
- * </pre>
- *
- * When a new character is encountered:
+ * Explanation:
  * <ul>
- *   <li>Mark it as seen.</li>
- *   <li>Increase the count of unique letters found.</li>
+ *   <li>{@code (c - 'a')} gives position of letter.</li>
+ *   <li>{@code 1 << position} creates a bitmask for that letter.</li>
+ *   <li>Bitwise OR stores it in the mask.</li>
  * </ul>
  *
- * If the count reaches 26, the sentence is a pangram.
+ * When all 26 bits are set:
+ *
+ * <pre>
+ * mask == (1 << 26) - 1
+ * </pre>
+ *
+ * Because:
+ *
+ * <pre>
+ * (1 << 26) - 1
+ * =
+ * 11111111111111111111111111  (26 ones)
+ * </pre>
  *
  * -----------------------------------------------------------------------
  * <b>Algorithm Steps:</b>
  *
  * <ul>
- *   <li>Create a boolean array of size 26.</li>
- *   <li>Initialize a counter for unique characters.</li>
+ *   <li>Initialize mask = 0.</li>
  *   <li>Traverse each character in the sentence.</li>
- *   <ul>
- *     <li>Map character to index.</li>
- *     <li>If not seen before, mark it and increment counter.</li>
- *     <li>If counter reaches 26, return true immediately.</li>
- *   </ul>
- *   <li>If traversal finishes and count < 26, return false.</li>
+ *   <li>Set the corresponding bit.</li>
+ *   <li>After traversal, check if mask equals
+ *       (1 << 26) - 1.</li>
  * </ul>
  *
  * -----------------------------------------------------------------------
@@ -93,42 +96,35 @@
  * Input:
  * "thequickbrownfoxjumpsoverthelazydog"
  *
- * All letters from 'a' to 'z' appear at least once.
+ * As letters appear, bits are set in mask.
+ *
+ * Final mask:
+ * 11111111111111111111111111
+ *
+ * Since all bits are set → Pangram.
  *
  * Output:
  * true
- * </pre>
- *
- * Another example:
- *
- * <pre>
- * Input:
- * "leetcode"
- *
- * Missing several letters.
- *
- * Output:
- * false
  * </pre>
  *
  * -----------------------------------------------------------------------
  * <b>Why This Approach Works Well:</b>
  *
  * <ul>
- *   <li>Single traversal of the sentence.</li>
- *   <li>Constant-time character lookup.</li>
- *   <li>Early termination when all letters are found.</li>
+ *   <li>Uses a single integer instead of an array.</li>
+ *   <li>Very memory efficient.</li>
+ *   <li>Bit operations are extremely fast.</li>
  * </ul>
  *
  * -----------------------------------------------------------------------
  * <b>Time Complexity:</b>
- * O(n), where {@code n} is the length of the sentence.<br>
+ * O(n), where n is the sentence length.<br>
  *
  * <b>Space Complexity:</b>
- * O(1) — fixed array of size 26.
+ * O(1) — only one integer used.
  * -----------------------------------------------------------------------
  */
-public class LeetCode1832_CheckIfSentenceIsPangram {
+public class LeetCode1832_CheckIfSentenceIsPangram_Bitmask {
 
     public static void main(String[] args) {
 
@@ -140,34 +136,19 @@ public class LeetCode1832_CheckIfSentenceIsPangram {
     }
 
     /**
-     * Returns true if the sentence contains every letter
-     * of the English alphabet at least once.
-     *
-     * @param sentence input string
-     * @return true if pangram, otherwise false
+     * Checks if the sentence is a pangram using bitmasking.
      */
     public static boolean checkIfPangram(String sentence) {
 
-        boolean[] seen = new boolean[26];
-        int count = 0;
+        int mask = 0;
 
         for (char c : sentence.toCharArray()) {
 
-            int index = c - 'a';
-
-            // If this letter hasn't been seen before
-            if (!seen[index]) {
-
-                seen[index] = true;
-                count++;
-
-                // Early exit when all 26 letters are found
-                if (count == 26) {
-                    return true;
-                }
-            }
+            // Set the bit corresponding to the character
+            mask |= 1 << (c - 'a');
         }
 
-        return false;
+        // Check if all 26 bits are set
+        return mask == (1 << 26) - 1;
     }
 }
