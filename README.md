@@ -42,6 +42,7 @@ I aim to write **clean**, **readable**, and **efficient** Java code while improv
 
 ┣ 📁 Arrays
 ┣ 📁 BitManipulation
+┣ 📁 Design
 ┣ 📁 Hashing
 ┣ 📁 Maths
 ┣ 📁 Patterns
