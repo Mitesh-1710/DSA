@@ -135,7 +135,7 @@ public class LeetCode3760_MaximumSubstringsWithDistinctStart {
 
     public static void main(String[] args) {
 
-        String s = "abac";
+        String s = "abacdfghtty";
 
         int result = maxDistinct(s);
 
