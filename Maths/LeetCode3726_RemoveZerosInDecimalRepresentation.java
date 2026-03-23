@@ -12,59 +12,71 @@
  * -----------------------------------------------------------------------
  * <b>Thought Process Behind the Solution:</b>
  *
- * The task is to remove all zero digits while keeping
- * the order of the remaining digits intact.
+ * The goal is to remove all zero digits while preserving
+ * the order of remaining digits.
  *
  * Naive Approach:
  * <ul>
- *   <li>Convert the number to a string.</li>
- *   <li>Remove all '0' characters.</li>
- *   <li>Convert back to a number.</li>
+ *   <li>Convert number to string.</li>
+ *   <li>Remove '0' characters.</li>
+ *   <li>Convert back to number.</li>
  * </ul>
  *
- * This works but involves unnecessary string conversion.
+ * This introduces unnecessary overhead.
  *
- * Optimized Approach:
+ * Initial Optimized Approach:
  * <ul>
- *   <li>Process digits using arithmetic operations.</li>
- *   <li>Skip zero digits.</li>
- *   <li>Rebuild the number.</li>
+ *   <li>Extract digits using modulo.</li>
+ *   <li>Build number while skipping zeros.</li>
+ *   <li>Reverse again to restore order.</li>
  * </ul>
  *
- * However, direct rebuilding reverses the order of digits,
- * so we need an additional reversal step.
+ * Better Optimized Approach (Final):
+ * <ul>
+ *   <li>Use <b>place-value construction</b> to build the number
+ *       directly in correct order.</li>
+ *   <li>Avoid double reversal completely.</li>
+ * </ul>
  *
  * -----------------------------------------------------------------------
- * <b>Concept (Detailed Explanation): Digit Filtering + Reverse Pattern</b>
+ * <b>Concept (Detailed Explanation): Place-Value Construction</b>
  *
- * Step 1: Extract digits
+ * Normally:
  *
  * <pre>
  * digit = n % 10
  * n = n / 10
  * </pre>
  *
- * Step 2: Skip zeros and build number
+ * builds digits from right to left.
+ *
+ * Instead of reversing later, we maintain a multiplier:
  *
  * <pre>
- * reversed = reversed * 10 + digit
+ * place = 1, 10, 100, ...
  * </pre>
  *
- * But this builds the number in reverse order.
+ * When we encounter a non-zero digit:
  *
- * Step 3: Reverse again to restore original order.
+ * <pre>
+ * result += digit * place
+ * place *= 10
+ * </pre>
+ *
+ * This directly builds the number in correct order.
  *
  * -----------------------------------------------------------------------
  * <b>Algorithm Steps:</b>
  *
  * <ul>
- *   <li>Initialize reversed = 0.</li>
- *   <li>Traverse digits of n:</li>
+ *   <li>Initialize result = 0 and place = 1.</li>
+ *   <li>Traverse digits using modulo and division.</li>
+ *   <li>If digit ≠ 0:</li>
  *   <ul>
- *     <li>If digit ≠ 0 → append to reversed.</li>
+ *     <li>Add digit * place to result.</li>
+ *     <li>Update place *= 10.</li>
  *   </ul>
- *   <li>Reverse the intermediate number to restore order.</li>
- *   <li>Return final result.</li>
+ *   <li>Return result.</li>
  * </ul>
  *
  * -----------------------------------------------------------------------
@@ -74,16 +86,14 @@
  * Input:
  * n = 102030
  *
- * Step 1 (filter + reverse build):
- * digits → 0 skip
- * 3 → reversed = 3
- * 0 skip
- * 2 → reversed = 32
- * 0 skip
- * 1 → reversed = 321
+ * Process:
  *
- * Step 2 (reverse again):
- * 321 → 123
+ * digit = 0 → skip
+ * digit = 3 → result = 3
+ * digit = 0 → skip
+ * digit = 2 → result = 23
+ * digit = 0 → skip
+ * digit = 1 → result = 123
  *
  * Output:
  * 123
@@ -93,9 +103,9 @@
  * <b>Why This Approach Works Well:</b>
  *
  * <ul>
- *   <li>Avoids string conversion.</li>
- *   <li>Efficient digit-level processing.</li>
- *   <li>Maintains order using double-reversal.</li>
+ *   <li>Single pass solution.</li>
+ *   <li>No reversal required.</li>
+ *   <li>Efficient digit reconstruction.</li>
  * </ul>
  *
  * -----------------------------------------------------------------------
@@ -118,31 +128,25 @@ public class LeetCode3726_RemoveZerosInDecimalRepresentation {
     }
 
     /**
-     * Removes zero digits from the number.
+     * Removes zero digits using place-value technique.
      */
     public static long removeZeros(long n) {
 
-        long reversed = 0;
+        long result = 0;
+        long place = 1;
 
-        // Step 1: Remove zeros and build reversed number
         while (n > 0) {
 
             long digit = n % 10;
 
+            // Only process non-zero digits
             if (digit != 0) {
-                reversed = reversed * 10 + digit;
+
+                result += digit * place;
+                place *= 10;
             }
 
             n /= 10;
-        }
-
-        // Step 2: Reverse again to restore original order
-        long result = 0;
-
-        while (reversed > 0) {
-
-            result = result * 10 + (reversed % 10);
-            reversed /= 10;
         }
 
         return result;
