@@ -45,6 +45,7 @@ I aim to write **clean**, **readable**, and **efficient** Java code while improv
 ┣ 📁 Design
 ┣ 📁 Hashing
 ┣ 📁 Maths
+┣ 📁 Matrix
 ┣ 📁 Patterns
 ┣ 📁 Recursion
 ┣ 📁 Searching
