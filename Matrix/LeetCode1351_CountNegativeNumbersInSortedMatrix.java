@@ -71,7 +71,6 @@
  *     <li>Add (m - row) to count.</li>
  *     <li>Move left.</li>
  *   </ul>
- *
  *   <li>Else:</li>
  *   <ul>
  *     <li>Move down.</li>
