@@ -76,47 +76,37 @@ public class GreatestCommonDivisor {
 
     public static void main(String[] args) {
         int n1 = 10, n2 = 20;
-        int gcd = GCD(n1, n2);
+        int gcd = gcd(n1, n2);
 
         System.out.println("GCD of " + n1 + " and " + n2 + " = " + gcd);
     }
 
     /**
-     * Computes the Greatest Common Divisor (GCD) of two positive integers
-     * using the subtraction-based Euclidean Algorithm.
+     * Computes the Greatest Common Divisor (GCD) of two integers
+     * using the Euclidean Algorithm (modulo-based approach).
      *
      * <p>Logic:</p>
      * <ul>
-     *   <li>Repeatedly subtract the smaller number from the larger one.</li>
-     *   <li>When one of the numbers becomes 0, the other is the GCD.</li>
+     *   <li>Repeatedly replace (n1, n2) with (n2, n1 % n2).</li>
+     *   <li>When n2 becomes 0, n1 contains the GCD.</li>
      * </ul>
      *
-     * <p>Note:</p>
+     * <p>Advantages:</p>
      * <ul>
-     *   <li>This is more efficient than the brute-force approach, which tries
-     *       all possible divisors from min(n1, n2) down to 1.</li>
+     *   <li>More efficient than the subtraction-based method.</li>
+     *   <li>Time complexity is O(log(min(n1, n2))).</li>
      * </ul>
      *
      * @param n1 first number
      * @param n2 second number
      * @return the Greatest Common Divisor of n1 and n2
      */
-    public static int GCD(int n1, int n2) {
-
-        // Continue until one number becomes zero
-        while (n1 != 0 && n2 != 0) {
-
-            // If n1 is smaller, subtract it from n2
-            if (n1 < n2) {
-                n2 = n2 - n1;
-
-                // Else subtract n2 from n1
-            } else {
-                n1 = n1 - n2;
-            }
+    public static int gcd(int n1, int n2) {
+        while (n2 != 0) {
+            int temp = n2;
+            n2 = n1 % n2;
+            n1 = temp;
         }
-
-        // When one becomes zero, return the other one
-        return n1 < n2 ? n2 : n1;
+        return n1;
     }
 }
