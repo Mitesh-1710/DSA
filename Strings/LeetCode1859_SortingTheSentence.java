@@ -173,4 +173,16 @@ public class LeetCode1859_SortingTheSentence {
 
         return ans.toString();
     }
+
+    public String sortSentence1(String s) {
+        String[] words = s.split(" ");
+        String[] res = new String[words.length];
+
+        for (String word : words) {
+            int idx = word.charAt(word.length() - 1) - '1';
+            res[idx] = word.substring(0, word.length() - 1);
+        }
+
+        return String.join(" ", res);
+    }
 }
